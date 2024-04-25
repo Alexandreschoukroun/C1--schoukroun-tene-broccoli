@@ -9,7 +9,7 @@ describe('TournamentGenerator', () => {
       ];
       const generateurTournoi = new TournamentGenerator(equipes);
       const nombreTotalJoueurs = generateurTournoi.getNombreTotalJoueurs();
-      expect(nombreTotalJoueurs).to.equal(6); // On s'attend à 6 joueurs au total dans les deux équipes
+      expect(nombreTotalJoueurs).to.equal(6); 
     });
   });
 
@@ -23,7 +23,7 @@ describe('TournamentGenerator', () => {
       ];
       const generateurTournoi = new TournamentGenerator(equipes);
       const nombreTotalJoueurs = generateurTournoi.getNombreTotalJoueurs();
-      expect(nombreTotalJoueurs).to.equal(9); // On s'attend à 9 joueurs au total dans les trois équipes
+      expect(nombreTotalJoueurs).to.equal(9); 
     });
   });
 
@@ -33,7 +33,7 @@ describe('TournamentGenerator', () => {
     it('devrait retourner 0 si aucune équipe n\'est fournie', () => {
       const generateurTournoi = new TournamentGenerator([]);
       const nombreTotalJoueurs = generateurTournoi.getNombreTotalJoueurs();
-      expect(nombreTotalJoueurs).to.equal(0); // On s'attend à 0 joueurs si aucune équipe n'est fournie
+      expect(nombreTotalJoueurs).to.equal(0); 
     });
   });
 
@@ -42,7 +42,7 @@ describe('generateTournament génère le bon nombre de phases finales', () => {
     const equipes = [
       { nom: 'Équipe 1', joueurs: ['Joueur 1', 'Joueur 2', 'Joueur 3'] },
       { nom: 'Équipe 2', joueurs: ['Joueur 4', 'Joueur 5', 'Joueur 6'] },
-      // Ajoutez plus d'équipes au besoin
+      
     ];
     const generateurTournoi = new TournamentGenerator(equipes);
     generateurTournoi.generateTournament();
@@ -74,6 +74,6 @@ describe('generateFinalStages génère le bon nombre de phases finales', () => {
     generateurTournoi.generatePoules();
     generateurTournoi.simulatePoulesMatches();
     generateurTournoi.generateFinalStages();
-    expect(generateurTournoi.finalStages.length).to.be.above(0); // Utilisation de to.be.above au lieu de toBeGreaterThan
+    expect(generateurTournoi.finalStages.length).to.be.above(0); 
   });
 });
